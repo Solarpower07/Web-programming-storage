@@ -1,0 +1,68 @@
+<!This page is not complete, do not try to use it!>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Account Creation</title>
+        <link href="/core/core.css" rel="stylesheet">
+        <link href="/core/form.css" rel="stylesheet">
+        <link href="/pages/styles/login.css" rel="stylesheet">
+        <script src="/core/core.js"></script>
+    </head>
+    <body>
+        <div class="popup-wrapper">
+            <div class="popup-box">
+                
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="upper-header">
+                    <div class="web-title">
+                        <h1 class="web-title-text">Web Programming Tests</h1>
+                    </div>
+                    <div class="account-display">
+                        <div class="disconnected" id="disconnected">
+                            
+                        </div>
+                        <div class="signed-in" id="connected" style="display:grid">
+                            <h2 class="account-text">Welcome, <b><span id="account-username"></span></b>!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="title-box">
+                    <h1 class="page-title"></h1>
+                </div>
+                <div class="form">
+                    <div class="form-inner">
+                        <p class="form-desc">Log In</p>
+                        <input class="form-input" type="email" id="input-email" placeholder="Email" maxlength="127">
+                        <input class="form-input" type="password" name="pass" id="input-pass" placeholder="Password" maxlength="255">
+                        <br>
+                        <b><a class="form-text link right-align password-reset" onclick="accounts.current.reset_pass()">Forgot password?</a></b>
+                        <br>
+                        <div class="form-error-box">
+                            <h2 class="form-input-error" id="form-error" style="display:auto">An unexpected error has occurred. Please try again.</h2>
+                        </div>
+                        <br>
+                        <button class="form-submit" id="login-submit" onclick="login()">Log In</button>
+                        <br>
+                        <h3 class="form-text signup">Don't have an account? <a href="signup.html" class="link">Sign up now!</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                
+            </div>
+        </div>
+        <script src="scripts/login.js"></script>
+        <script src="/core/account_display.js"></script>
+    </body>
+</html>

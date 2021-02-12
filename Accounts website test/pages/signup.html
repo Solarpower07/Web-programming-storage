@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Account Creation</title>
+        <link href="/core/core.css" rel="stylesheet">
+        <link href="/core/form.css" rel="stylesheet">
+        <link href="/pages/styles/signup.css" rel="stylesheet">
+        <script src="/core/core.js"></script>
+    </head>
+    <body>
+        <div class="popup-wrapper">
+            <div class="popup-box">
+                
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="upper-header">
+                    <div class="web-title">
+                        <h1 class="web-title-text">Web Programming Tests</h1>
+                    </div>
+                    <div class="account-display">
+                        <div class="disconnected" id="disconnected">
+                            
+                        </div>
+                        <div class="signed-in" id="connected" style="display:none">
+                            <h2 class="account-text">Welcome, <b><span id="account-username"></span></b>!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="title-box">
+                    <h1 class="page-title"></h1>
+                </div>
+                <div class="form">
+                    <div class="form-inner">
+                        <p class="form-desc">Sign Up</p>
+                        <input class="form-input" type="email" id="form-email" placeholder="Email" maxlength="127">
+                        <input class="form-input" type="text" name="main-username" id="form-user" placeholder="Username" maxlength="20">
+                        <input class="form-input" type="password" name="pass" id="form-pass" placeholder="Password" maxlength="255">
+                        <br>
+                        <div class="form-error-box">
+                            <h2 class="form-input-error" id="form-error" style="display:none">An unexpected error has occurred. Please try again.</h2>
+                        </div>
+                        <br>
+                        <button class="form-submit" id="submit" onclick="form_submit()">Create Account</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                
+            </div>
+        </div>
+        <script src="scripts/signup.js"></script>
+        <script src="/core/account_display.js"></script>
+    </body>
+</html>
