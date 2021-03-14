@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Game | Castle Clash Gem Rolling Simulator</title>
+        <link href="/core/core.css" rel="stylesheet">
+        <link href="/core/game.css" rel="stylesheet">
+        <link href="/media/cc-main-icon.ico" rel="icon">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="main">
+            <div class="heading">
+                <h1 class="title">Castle Clash Gem Rolling Simulator</h1>
+            </div>
+            <div class="content">
+                <div class="game">
+                    <div class="display">
+                        <div class="output main slot1">
+                            <div class="nameplate main name1"><h3 class="nameplate-text output1"></h3></div>
+                        </div>
+                        <div class="output triple1 slot2">
+                            <div class="nameplate triple1 name2"><h3 class="nameplate-text output2"></h3></div>
+                        </div>
+                        <div class="output triple2 slot3">
+                            <div class="nameplate triple2 name3"><h3 class="nameplate-text output3"></h3></div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <div class="single-roll button" onclick="single()"></div>
+                        <div class="triple-roll button" onclick="triple()"></div>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats">
+                            <h2 class="stats-text">Gems spent: <span class="gems">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Total heroes rolled: <span class="heroes">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Legendary heroes rolled: <span class="legends">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Elite heroes rolled: <span class="elites">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ordinary heroes rolled: <span class="ordinaries">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Sacrifices rolled: <span class="sacrifice">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/engine-experimental.js"></script>
+        <div class="version-box">
+            <h4 class="version">BETA_UNSTABLE v0.3.49 (67)</h4>
+        </div>
+    </body>
+</html>
