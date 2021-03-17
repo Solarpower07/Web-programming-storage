@@ -1,0 +1,335 @@
+<html>
+    <head>
+        <title>Game | Castle Clash Gem Rolling Simulator</title>
+        <link href="/core/core.css" rel="stylesheet">
+        <link href="/core/game.css" rel="stylesheet">
+        <link href="/media/cc-main-icon.ico" rel="icon">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="main">
+            <div class="heading">
+                <h1 class="title">Castle Clash Gem Rolling Simulator</h1>
+            </div>
+            <div class="content">
+                <div class="game">
+                    <div class="display">
+                        <div class="output main slot1">
+                            <div class="nameplate main name1"><h3 class="nameplate-text output1"></h3></div>
+                        </div>
+                        <div class="output triple1 slot2">
+                            <div class="nameplate triple1 name2"><h3 class="nameplate-text output2"></h3></div>
+                        </div>
+                        <div class="output triple2 slot3">
+                            <div class="nameplate triple2 name3"><h3 class="nameplate-text output3"></h3></div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <div class="single-roll button" onclick="single()"></div>
+                        <div class="triple-roll button" onclick="triple()"></div>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats">
+                            <h2 class="stats-text">Gems spent: <span class="gems stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Total heroes rolled: <span class="heroes stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Legendary heroes rolled: <span class="legends stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Elite heroes rolled: <span class="elites stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ordinary heroes rolled: <span class="ordinaries stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Sacrifices rolled: <span class="sacrifice stat">0</span></h2>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <div class="reset button" onclick="reset()">Reset Stats</div>
+                    </div>
+                    <br>
+                    <div class="button-box">
+                        <div class="collapse button" onclick="collapse()">Show Advanced Statistics</div>
+                    </div>
+                    <div class="stats-box advanced-stats">
+                        <h2 class="stats-divider">Crystal Oozes rolled: <span id="crystal" class="stat">0</span></h2>
+                        <br>
+                        <h2 class="stats-divider">Gelatinous Champions rolled: <span id="gel-champ" class="stat">0</span></h2>
+                        <br>
+                        <h2 class="stats-divider">Ordinary Champions</h2>
+                        <div class="stats">
+                            <h2 class="stats-text">Angels rolled: <span id="Angel" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Marksmans rolled: <span id="Marksman" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Hill Giants rolled: <span id="Hill Giant" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Engineers rolled: <span id="Engineer" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Frost Witches rolled: <span id="Frost Witch" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Dryads rolled: <span id="Dryad" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Alchemists rolled: <span id="Alchemist" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Marauders rolled: <span id="Marauder" class="stat">0</span></h2>
+                        </div>
+                        <br>
+                        <h2 class="stats-divider">Elite Champions</h2>
+                        <div class="stats">
+                            <h2 class="stats-text">Executioners rolled: <span id="Executioner" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Assassins rolled: <span id="Assassin" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Werewolves rolled: <span id="Werewolf" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Cyclopses rolled: <span id="Cyclops" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Pain-Das rolled: <span id="Pain-Da" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Shamans rolled: <span id="Shaman" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Serpent Queens rolled: <span id="Serpent Queen" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ice Demons rolled: <span id="Ice Demon" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Tritons rolled: <span id="Triton" class="stat">0</span></h2>
+                        </div>
+                        <br>
+                        <h2 class="stats-divider">Legendary Champions</h2>
+                        <div class="stats">
+                            <h2 class="stats-text">Paladins rolled: <span id="Paladin" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ninjas rolled: <span id="Ninja" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Succubuses rolled: <span id="Succubus" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Champions rolled: <span id="Champion" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Druids rolled: <span id="Druid" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Thunder Gods rolled: <span id="Thunder God" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Grizzly Reapers rolled: <span id="Grizzly Reaper" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Pumpkin Dukes rolled: <span id="Pumpkin Duke" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Atlanticores rolled: <span id="Atlanticore" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Snowzillas rolled: <span id="Snowzilla" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Cupids rolled: <span id="Cupid" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Immorteps rolled: <span id="Immortep" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Aries' rolled: <span id="Aries" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Vlad Draculas rolled: <span id="Vlad Dracula" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Orksbanes rolled: <span id="Orksbane" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Santa Booms rolled: <span id="Santa Boom" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Death Knights rolled: <span id="Death Knight" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Pixies rolled: <span id="Pixie" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Sirens rolled: <span id="Siren" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Warlocks rolled: <span id="Warlock" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Treantaurs rolled: <span id="Treantaur" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Harpy Queens rolled: <span id="Harpy Queen" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Skull Knights rolled: <span id="Skull Knight" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Dread Drakes rolled: <span id="Dread Drake" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ghoulems rolled: <span id="Ghoulem" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Candy Kanes rolled: <span id="Candy Kane" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Valentinas rolled: <span id="Valentina" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Phantom Kings rolled: <span id="Phantom King" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Beast Tamers rolled: <span id="Beast Tamer" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Lady Leos rolled: <span id="Lady Leo" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Grimfiends rolled: <span id="Grimfiend" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Dracaxes rolled: <span id="Dracax" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Medusas rolled: <span id="Medusa" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Trixie Treats rolled: <span id="Trixie Treat" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Revenants rolled: <span id="Revenant" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Lil' Nicks rolled: <span id="Lil Nick" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Michaels rolled: <span id="Michael" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Heartbreakers rolled: <span id="Heartbreaker" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Anubises rolled: <span id="Anubis" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ronins rolled: <span id="Ronin" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Gunslingers rolled: <span id="Gunslinger" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Rocknos rolled: <span id="Rockno" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Mechtessas rolled: <span id="Mechtessa" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Wallawallas rolled: <span id="Wallawalla" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Creation-01s rolled: <span id="Creation-01" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Athenes rolled: <span id="Athene" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Sasquatchs rolled: <span id="Sasquatch" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Espiritas rolled: <span id="Espirita" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Dove Keepers rolled: <span id="Dove Keeper" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Cirrinas rolled: <span id="Cirrina" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Storm Eaters rolled: <span id="Storm Eater" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Professor Ribbits rolled: <span id="Professor Ribbit" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Lavanicas rolled: <span id="Lavanica" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Asuras rolled: <span id="Asura" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Ma Hatmas rolled: <span id="Ma Hatma" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Rowdy Rascals rolled: <span id="Rowdy Rascals" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Bogeymans rolled: <span id="Bogeyman" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Commodoras rolled: <span id="Commodora" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Lazulixes rolled: <span id="Lazulix" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Plant Warriors rolled: <span id="Plant Warrior" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Rosaleens rolled: <span id="Rosaleen" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Cosmos rolled: <span id="Cosmo" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Rippers rolled: <span id="Ripper" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Svalinns rolled: <span id="Svalinn" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Zephryicas rolled: <span id="Zephryica" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Occultists rolled: <span id="Occultist" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Phoboses rolled: <span id="Phobos" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Queen Wasps rolled: <span id="Queen Wasp" class="stat">0</span></h2>
+                        </div>
+                        <div class="stats">
+                            <h2 class="stats-text">Hot Shots rolled: <span id="Hot Shot" class="stat">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/engine-experimental.js"></script>
+        <div class="version-box">
+            <h4 class="version">v0.05.07 (99)</h4>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.background {
+    width: 100%;
+    height: 110%;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: rgb(37, 41, 51);
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.heading {
+    background-color: rgb(76, 76, 187);
+    color: rgb(255,255,255);
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 3px 3px rgba(0,0,50,0.5);
+    overflow: hidden;
+}
+.content {
+    margin-top: 90px;
+    width: 80%;
+    height: fill;
+    display: inline-block;
+    margin-left: 10%;
+    background-color: #949ac4;
+    padding: 15px;
+    box-shadow: 3px 3px 3px rgba(0,0,50,0.5);
+    overflow: hidden;
+}
+.main {
+    width: 100%;
+    height: 110%;
+    margin-left: -8px;
+    margin-top: -8px;
+    font-family: sans-serif;
+}
+.title {
+    margin: auto;
+    margin-top: 25px;
+    font-size: 30px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 3px rgb(10,10,30);
+    font-weight: bold;
+    cursor: default;
+}
+.paragraph {
+    margin: auto;
+    font-size: 20px;
+}
+.start {
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgb(20,20,100);
+    border-radius: 10px;
+    color: #ffffff;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+}
+.start:hover {
+    background-color: rgb(50,50,200);
+}
+.start-text {
+    display: inline-block;
+    font-size: 25px;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.version {
+    position: fixed;
+    margin: auto;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    display: block;
+}
+.version-box {
+    width: 130px;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding:20px;
+    background-color: rgb(10,10,30);
+    text-align: center;
+    margin: auto;
+    display: block;
+}
